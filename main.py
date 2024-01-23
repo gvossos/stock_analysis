@@ -1,5 +1,3 @@
-# Stock Analysis
-
 from crewai import Crew
 from textwrap import dedent
 

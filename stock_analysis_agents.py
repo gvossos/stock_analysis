@@ -7,11 +7,6 @@ from tools.sec_tools import SECTools
 
 from langchain.tools.yahoo_finance_news import YahooFinanceNewsTool
 
-from langchain.llms import Ollama 
-ollama_openchat = Ollama(model="openchat")
-
-
-
 class StockAnalysisAgents():
   def financial_analyst(self):
     return Agent(
@@ -29,7 +24,6 @@ class StockAnalysisAgents():
         SECTools.search_10q,
         SECTools.search_10k
       ]
-      llm=ollama_openchat 
     )
 
   def research_analyst(self):
@@ -50,7 +44,6 @@ class StockAnalysisAgents():
         SECTools.search_10q,
         SECTools.search_10k
       ]
-      llm=ollama_openchat
   )
 
   def investment_advisor(self):
@@ -70,5 +63,4 @@ class StockAnalysisAgents():
         CalculatorTools.calculate,
         YahooFinanceNewsTool()
       ]
-      llm=ollama_openchat
     )
