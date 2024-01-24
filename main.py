@@ -10,6 +10,7 @@ from crewai import Crew
 from textwrap import dedent
 from dotenv import load_dotenv
 from pydantic import BaseModel
+
 load_dotenv()
 
 # Your existing imports and FinancialCrew class here...
