@@ -6,6 +6,13 @@ from tools.search_tools import SearchTools
 from tools.sec_tools import SECTools
 
 from langchain.tools.yahoo_finance_news import YahooFinanceNewsTool
+from langchain.chat_models import ChatOpenAI
+
+
+#from langchain.llms import Ollama
+#ollama_mixtral = Ollama(model="mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf")
+
+llm_GPT4 =ChatOpenAI(model_name="gpt-4")
 
 class StockAnalysisAgents():
   def financial_analyst(self):
@@ -17,6 +24,7 @@ class StockAnalysisAgents():
       lots of expertise in stock market analysis and investment
       strategies that is working for a super important customer.""",
       verbose=True,
+      llm=llm_GPT4, # GPT or Ollama model passed here
       tools=[
         BrowserTools.scrape_and_summarize_website,
         SearchTools.search_internet,
@@ -36,6 +44,7 @@ class StockAnalysisAgents():
       and market sentiments. Now you're working on a super 
       important customer""",
       verbose=True,
+      llm=llm_GPT4, # GPT or Ollama model passed here
       tools=[
         BrowserTools.scrape_and_summarize_website,
         SearchTools.search_internet,
@@ -56,6 +65,7 @@ class StockAnalysisAgents():
       strategic investment advice. You are now working for
       a super important customer you need to impress.""",
       verbose=True,
+      llm=llm_GPT4, # GPT or Ollama model passed here
       tools=[
         BrowserTools.scrape_and_summarize_website,
         SearchTools.search_internet,
