@@ -1,4 +1,4 @@
-# CrewAI SAAS for Stock Analysis using  LLMs
+# CrewAI SAAS for Stock Analysis using LLMs
 ## Introduction
 This project extends the crewAI Stock Analysis project to create a SAAS project using the CrewAI framework to automate the process of analyzing a stock. CrewAI orchestrates autonomous AI agents, enabling them to collaborate and execute complex tasks efficiently.  SAAS is enabled via fastAPI.
 
