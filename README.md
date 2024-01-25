@@ -1,6 +1,6 @@
 # CrewAI SaaS for Stock Analysis using LLMs
 ## Introduction
-This project extends the crewAI Stock Analysis project to create a SAAS project using the CrewAI framework to automate the process of analyzing a stock. CrewAI orchestrates autonomous AI agents, enabling them to collaborate and execute complex tasks efficiently using a SaaS architecture.  SaaS is enabled via fastAPI micro-services
+This project extends the crewAI Stock Analysis project to create a SaaS (Software as a Service) project using the CrewAI framework to automate the process of analyzing a stock. CrewAI orchestrates autonomous AI agents, enabling them to collaborate and execute complex tasks efficiently using a SaaS architecture.  SaaS is enabled via fastAPI micro-services
 
 By [@gvossos](https://github.com/gvossos/)
 
@@ -17,7 +17,7 @@ By [@gvossos](https://github.com/gvossos/)
 ## VM Setup
 Create a virtual environment.
 
-- **conda** conda create --name stock_analysis python=3.10.10 pip
+- **conda**: `conda create --name stock_analysis python=3.10.10 pip`
 
 ## CrewAI Framework
 CrewAI is designed to facilitate the collaboration of role-playing AI agents. In this example, these agents work together to give a complete stock analysis and investment recommendation
@@ -31,10 +31,10 @@ not to, and by doing so it will cost you money.*
 - **Configure Environment**: Copy ``.env.example` and set up the environment variables for [Browseless](https://www.browserless.io/), [Serper](https://serper.dev/), [SEC-API](https://sec-api.io) and [OpenAI](https://platform.openai.com/api-keys)
 - **Install Dependencies**: Run `poetry install --no-root`.
 - **Execute the Script**: Run `python main.py` and input your idea.
-- **Install SaaS Dependencies**: conda install fastapi uvicorn
-- pip install --upgrade pydantic==2.4.2
-- pip install jija2
-- pip install langchain_openai
+- **Install SaaS Dependencies**: `conda install fastapi uvicorn`
+- `pip install --upgrade pydantic==2.4.2`
+- `pip install jija2`
+- `pip install langchain_openai`
 
 
 ## Details & Explanation
