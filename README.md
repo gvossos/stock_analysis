@@ -29,16 +29,16 @@ It uses GPT-4 by default so you should have access to that to run it.
 not to, and by doing so it will cost you money.*
 
 - **Configure Environment**: Copy ``.env.example` and set up the environment variables for [Browseless](https://www.browserless.io/), [Serper](https://serper.dev/), [SEC-API](https://sec-api.io) and [OpenAI](https://platform.openai.com/api-keys)
-- **Install Dependencies**: Run `poetry install --no-root`.
-- **Execute the Script**: Run `python main.py` and input your idea.
+- **Install crewAI Dependencies**: Run `poetry install --no-root`.
 - **Install SaaS Dependencies**: `conda install fastapi uvicorn`
 - `pip install --upgrade pydantic==2.4.2`
 - `pip install jija2`
 - `pip install langchain_openai`
+- **Execute the crewAI SaaS Service**: Run `python main.py` and input the name of your stock.
 
 
 ## Details & Explanation
-- **Running the Script**: Execute `python main.py`` and input your idea when prompted. The script will leverage the CrewAI SAAS framework to process the idea and generate a landing page.
+- **Running the Script**: Execute `python main.py`` and input your idea when prompted. The script will leverage the CrewAI SaaS framework to process the idea and generate a landing page.
 Access the web-page by clicking on https://127.0.0.1:8000 link from the console.
 - **Key Components**:
   - `./main.py`: Main script file.
