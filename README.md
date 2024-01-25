@@ -1,8 +1,8 @@
-# CrewAI SAAS for Stock Analysis using LLMs
+# CrewAI SaaS for Stock Analysis using LLMs
 ## Introduction
-This project extends the crewAI Stock Analysis project to create a SAAS project using the CrewAI framework to automate the process of analyzing a stock. CrewAI orchestrates autonomous AI agents, enabling them to collaborate and execute complex tasks efficiently.  SAAS is enabled via fastAPI.
+This project extends the crewAI Stock Analysis project to create a SAAS project using the CrewAI framework to automate the process of analyzing a stock. CrewAI orchestrates autonomous AI agents, enabling them to collaborate and execute complex tasks efficiently using a SaaS architecture.  SaaS is enabled via fastAPI micro-services
 
-By [@joaomdmoura](https://x.com/joaomdmoura)
+By [@gvossos](https://github.com/gvossos/)
 
 - [VM Setup](#vm-setup)
 - [CrewAI Framework](#crewai-framework)
@@ -31,10 +31,10 @@ not to, and by doing so it will cost you money.*
 - **Configure Environment**: Copy ``.env.example` and set up the environment variables for [Browseless](https://www.browserless.io/), [Serper](https://serper.dev/), [SEC-API](https://sec-api.io) and [OpenAI](https://platform.openai.com/api-keys)
 - **Install Dependencies**: Run `poetry install --no-root`.
 - **Execute the Script**: Run `python main.py` and input your idea.
-- ** Install SAAS extensions**: conda install fastapi uvicorn
-pip install --upgrade pydantic==2.4.2
-pip install jija2
-pip install langchain_openai
+- **Install SaaS Dependencies**: conda install fastapi uvicorn
+- pip install --upgrade pydantic==2.4.2
+- pip install jija2
+- pip install langchain_openai
 
 
 ## Details & Explanation
