@@ -1,9 +1,10 @@
-# AI Crew for Stock Analysis
+# CrewAI SAAS for Stock Analysis using  LLMs
 ## Introduction
-This project is an example using the CrewAI framework to automate the process of analyzing a stock. CrewAI orchestrates autonomous AI agents, enabling them to collaborate and execute complex tasks efficiently.
+This project extends the crewAI Stock Analysis project to create a SAAS project using the CrewAI framework to automate the process of analyzing a stock. CrewAI orchestrates autonomous AI agents, enabling them to collaborate and execute complex tasks efficiently.  SAAS is enabled via fastAPI.
 
 By [@joaomdmoura](https://x.com/joaomdmoura)
 
+- [VM Setup](#vm-setup)
 - [CrewAI Framework](#crewai-framework)
 - [Running the script](#running-the-script)
 - [Details & Explanation](#details--explanation)
@@ -12,6 +13,11 @@ By [@joaomdmoura](https://x.com/joaomdmoura)
 - [Contributing](#contributing)
 - [Support and Contact](#support-and-contact)
 - [License](#license)
+
+## VM Setup
+Create a virtual environment.
+
+- **conda** conda create --name stock_analysis python=3.10.10 pip
 
 ## CrewAI Framework
 CrewAI is designed to facilitate the collaboration of role-playing AI agents. In this example, these agents work together to give a complete stock analysis and investment recommendation
@@ -25,17 +31,23 @@ not to, and by doing so it will cost you money.*
 - **Configure Environment**: Copy ``.env.example` and set up the environment variables for [Browseless](https://www.browserless.io/), [Serper](https://serper.dev/), [SEC-API](https://sec-api.io) and [OpenAI](https://platform.openai.com/api-keys)
 - **Install Dependencies**: Run `poetry install --no-root`.
 - **Execute the Script**: Run `python main.py` and input your idea.
+- ** Install SAAS extensions**: conda install fastapi uvicorn
+pip install --upgrade pydantic==2.4.2
+pip install jija2
+pip install langchain_openai
+
 
 ## Details & Explanation
-- **Running the Script**: Execute `python main.py`` and input your idea when prompted. The script will leverage the CrewAI framework to process the idea and generate a landing page.
+- **Running the Script**: Execute `python main.py`` and input your idea when prompted. The script will leverage the CrewAI SAAS framework to process the idea and generate a landing page.
+Access the web-page by clicking on https://127.0.0.1:8000 link from the console.
 - **Key Components**:
   - `./main.py`: Main script file.
   - `./stock_analysis_tasks.py`: Main file with the tasks prompts.
   - `./stock_analysis_agents.py`: Main file with the agents creation.
   - `./tools`: Contains tool classes used by the agents.
 
-## Using GPT 3.5
-CrewAI allow you to pass an llm argument to the agent construtor, that will be it's brain, so changing the agent to use GPT-3.5 instead of GPT-4 is as simple as passing that argument on the agent you want to use that LLM (in `main.py`).
+## Using LLMs
+CrewAI allow you to pass an llm argument to the agent construtor, that will be it's brain, so changing the agent to use another LLM like GPT-3.5 instead of GPT-4 is as simple as passing that argument on the agent you want to use that LLM (in `main.py`).
 ```python
 from langchain.chat_models import ChatOpenAI
 
