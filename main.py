@@ -16,7 +16,7 @@ from crewai import Crew
 from textwrap import dedent
 from dotenv import load_dotenv
 from pydantic import BaseModel
-#import time
+import time
 import threading
 
 load_dotenv()
@@ -60,13 +60,13 @@ def analyze_stock(company_name, status):
     status_url = f"http://localhost:8000/status/{company_name}"
     result_url = f"http://localhost:8000/result/{company_name}"
 
+    new_status = "Analyzing " + company_name + "..."
+
     # Trigger analysis
     analyze_response = requests.post(analyze_url, json={"company": company_name})
     if analyze_response.status_code != 200:
         return "Error initiating analysis", "No result"
 
-    new_status = "Analyzing " + company_name + "..."
-    
     # Poll for status - simplified version
     while True:
         status_response = requests.get(status_url)
@@ -75,7 +75,7 @@ def analyze_stock(company_name, status):
         status = status_response.json().get("status", "")
         if status == "Complete":
             break
-        #time.sleep(1)  # Simple polling mechanism, consider implementing a more sophisticated approach
+        time.sleep(1)  # Simple polling mechanism, consider implementing a more sophisticated approach
 
 
     # Get result
