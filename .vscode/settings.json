@@ -3,6 +3,7 @@
         "crewai",
         "dotenv",
         "fastapi",
+        "gradio",
         "langchain",
         "pydantic",
         "templating",
